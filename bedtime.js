@@ -7,9 +7,9 @@ async function updateBedtimeStatus() {
     const updatedEl = document.getElementById("bedtime-updated");
 
     statusEl.textContent = data.bedtime_mode === "on"
-      ? "🌙 ON"
+      ? "[ SLEEPING ]"
       : data.bedtime_mode === "off"
-      ? "☀️ OFF"
+      ? "[ AWAKE ]"
       : "No data yet";
 
     if (data.updated) {
