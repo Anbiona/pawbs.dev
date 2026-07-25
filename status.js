@@ -8,10 +8,10 @@ async function updateBedtimeStatus() {
 
     if (data.bedtime_mode === "on") {
       statusEl.textContent = "[ SLEEPING ]";
-      statusEl.style.color = "#f4b400"; // yellow
+      statusEl.style.color = "#f4b400";
     } else if (data.bedtime_mode === "off") {
       statusEl.textContent = "[ AWAKE ]";
-      statusEl.style.color = "#34a853"; // green
+      statusEl.style.color = "#34a853";
     } else {
       statusEl.textContent = "[ UNKNOWN ]";
       statusEl.style.color = "#ea4335";
