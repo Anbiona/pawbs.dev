@@ -6,11 +6,16 @@ async function updateBedtimeStatus() {
     const statusEl = document.getElementById("bedtime-status");
     const updatedEl = document.getElementById("bedtime-updated");
 
-    statusEl.textContent = data.bedtime_mode === "on"
-      ? "[ SLEEPING ]"
-      : data.bedtime_mode === "off"
-      ? "[ AWAKE ]"
-      : "No data yet";
+    if (data.bedtime_mode === "on") {
+      statusEl.textContent = "[ SLEEPING ]";
+      statusEl.style.color = "#f4b400"; // yellow
+    } else if (data.bedtime_mode === "off") {
+      statusEl.textContent = "[ AWAKE ]";
+      statusEl.style.color = "#34a853"; // green
+    } else {
+      statusEl.textContent = "[ UNKNOWN ]";
+      statusEl.style.color = "#ea4335";
+    }
 
     if (data.updated) {
       const time = new Date(data.updated).toLocaleTimeString();

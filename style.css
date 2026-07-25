@@ -57,6 +57,10 @@ body {
     text-align: center;
 }
 
+#sidebar .pawbs div {
+    margin: 8px;
+}
+
 #sidebar .nav {
     text-align: center;
     padding: 0px;
